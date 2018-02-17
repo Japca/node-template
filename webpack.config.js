@@ -10,17 +10,16 @@ const path = require('path')
 //     'lodash', 'axios',
 // ]
 
-// const bundleDir = './src/main/resources/public'
+ const bundleDir = './public'
 
 
 module.exports = {
     entry: {
-        // main: './src/main/resources/js/index.js',
-        main: './src/app.js'
+        main: './src/client/app.js'
       
     },
     output: {
-        path: path.resolve(__dirname, './public'),
+        path: path.resolve(__dirname, bundleDir),
         filename: 'bundle.js'
     },
     module: {
@@ -40,22 +39,13 @@ module.exports = {
         ],
     },
 
-    // devtool:'source-map',
     devtool: 'inline-source-map',
     devServer: {
         historyApiFallback: true,
         inline: true,
         hot: true,
-        contentBase: path.join(__dirname, './public'),
+        contentBase: path.join(__dirname, bundleDir),
         host: 'localhost',
-        // proxy: {
-        //     '/': {
-        //         target: 'http://localhost:8080/',
-        //         secure: false
-        //     }
-        // }
-
-        
     },
     plugins: [
         // new CleanWebpackPlugin([bundleDir]),
