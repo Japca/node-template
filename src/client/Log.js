@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ItemsList extends Component {
+export default class Log extends Component {
 
     render() {
         console.info('Log component')
