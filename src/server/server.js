@@ -11,7 +11,6 @@ if(process.env.NODE_ENV !== 'procuction') {
    const webpackConfig = require('../../webpack.config')
    server.use(webpackMiddleware(webpack(webpackConfig)))
 } else {
-  server.use(express.static('public'))
   server.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'))
   })
