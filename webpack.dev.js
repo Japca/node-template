@@ -18,7 +18,7 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /(node_modules|node)/,
+                exclude: /(node_modules)/,
                 use: 'babel-loader'
             },
             {
@@ -41,7 +41,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/template/index.html'
+            template: 'src/template/index-dev.html'
         }),
         new webpack.HotModuleReplacementPlugin()
     ]

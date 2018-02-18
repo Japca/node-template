@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Log from './Log'
+import Test from './Test/Test'
 
 const app = document.getElementById('app')
-ReactDOM.render(<Log />, app)
+ ReactDOM.render(<Test />, app)

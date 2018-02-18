@@ -4,7 +4,7 @@ const server = express()
 const port = process.env.PORT || 3000
 
 
-if(process.env.NODE_ENV !== 'procuction') {
+if(process.env.NODE_ENV === 'procuction') {
   const webpackMiddleware = require('webpack-dev-middleware')
   const webpack = require('webpack')
   const webpackConfig = require('../../webpack.dev')
